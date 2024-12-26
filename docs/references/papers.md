@@ -22,36 +22,7 @@
 | Large Language Models for Software Engineering: A Systematic Literature Review | Various | 2023 | - 软件工程应用<br>- 代码生成<br>- 代码理解 | [论文链接](https://arxiv.org/abs/2308.10620) |
 | Automated Code Generation with Large Language Models: A Survey | Various | 2023 | - 自动代码生成<br>- 工具链集成<br>- 实践案例 | [论文链接](https://arxiv.org/abs/2310.11386) |
 
-## 研究趋势
 
-1. **模型架构**
-   - 专用代码模型的发展
-   - 多模态融合的探索
-   - 长上下文处理能力
 
-2. **评估方法**
-   - 更全面的评估指标
-   - 自动化测试框架
-   - 实际应用场景验证
 
-3. **应用方向**
-   - 代码补全与生成
-   - 程序理解与转换
-   - 自动化测试生成
 
-## 重要发现
-
-1. **模型能力**
-   - 代码生成准确性持续提升
-   - 上下文理解能力显著改善
-   - 多语言支持更加完善
-
-2. **实践价值**
-   - 提高开发效率
-   - 降低入门门槛
-   - 辅助代码审查
-
-3. **局限性**
-   - 可靠性仍需���升
-   - 安全性问题需关注
-   - 计算资源要求高 
