@@ -18,14 +18,12 @@
   <script>
     window.$docsify = {
       name: 'LLM 代码能力调研',
-      repo: 'yourusername/llm-code-survey',
+      repo: 'gongqian/llm-code-survey',
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      // 根据环境设置 basePath
-      basePath: location.hostname === 'localhost' || location.hostname === '127.0.0.1' 
-        ? '/' 
-        : '/llm-code-survey/',
+      homepage: 'overview/introduction.md',
+      routerMode: 'hash',
       // 搜索配置
       search: {
         maxAge: 86400000,
