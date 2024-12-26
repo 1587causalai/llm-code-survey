@@ -1,6 +1,6 @@
 # LLM Code Survey
 
-> 大模型代码生成能力研究项目
+> 大模型代码生成能力调研和研究项目
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
