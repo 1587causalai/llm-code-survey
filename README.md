@@ -45,10 +45,8 @@ docsify serve docs
 - 注重知识分享和教育
 - 持续积累与迭代
 
-## 参考文献
+## 参考文献调研
 
-- J Jiang, et al. "A Survey on Large Language Models for Code Generation." arXiv:2406.00515, 2024
+[相关文献调研](docs/references/papers.md)
 
-## License
 
-MIT License 
