@@ -45,9 +45,9 @@
 #### 1. 模型间性能差异检验
 配对t检验统计量：
 
-$
+$$
 t = \frac{\bar{d}}{s_d/\sqrt{n}}
-$
+$$
 
 其中：
 - $\bar{d}$ 为差值的平均数
@@ -57,9 +57,9 @@ $
 #### 2. Temperature影响分析
 Pearson相关系数计算：
 
-$
+$$
 r = \frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}(x_i-\bar{x})^2}\sqrt{\sum_{i=1}^{n}(y_i-\bar{y})^2}}
-$
+$$
 
 其中：
 - $(x_i, y_i)$ 为配对观测值

@@ -76,11 +76,17 @@
       },
       // 代码高亮
       plugins: [
-        function(hook, vm) {
+        function(hook) {
           hook.beforeEach(function(content) {
-            return content.replace(/\$\$([\s\S]*?)\$\$/g, function(m, code) {
-              return '<div class="katex-display"><span class="katex-display">' + code + '</span></div>';
-            });
+            // 行内公式
+            content = content.replace(/\$([^$\n]+?)\$/g, (_, math) => 
+              katex.renderToString(math, { displayMode: false }));
+            
+            // 块级公式
+            content = content.replace(/\$\$([\s\S]+?)\$\$/g, (_, math) =>
+              katex.renderToString(math, { displayMode: true }));
+            
+            return content;
           });
         }
       ]
@@ -118,5 +124,8 @@
   
   <!-- PlantUML 支持 -->
   <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+  
+  <!-- docsify-katex 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
 </body>
 </html> 
