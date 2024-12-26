@@ -22,7 +22,10 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      basePath: '/llm-code-survey/',
+      // 根据环境设置 basePath
+      basePath: location.hostname === 'localhost' || location.hostname === '127.0.0.1' 
+        ? '/' 
+        : '/llm-code-survey/',
       // 搜索配置
       search: {
         maxAge: 86400000,
