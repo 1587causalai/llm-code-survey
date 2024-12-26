@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LLM 代码能力调研</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="探索大语言模型的代码生成能力">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- 主题样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- KaTeX 样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+  <!-- Mermaid 样式 -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'LLM 代码能力调研',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      // 搜索配置
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 6
+      },
+      // 字数统计
+      count:{
+        countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese',
+        localization: {
+          words: "",
+          minute: ""
+        },
+        isExpected: true
+      },
+      // 分页导航
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
+        crossChapter: true
+      },
+      // Markdown 配置
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "mermaid") {
+              return (
+                '<div class="mermaid">' + code + "</div>"
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+      // LaTeX 数学公式配置
+      latex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$']],
+      },
+      // 代码高亮
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(content) {
+            return content.replace(/\$\$([\s\S]*?)\$\$/g, function(m, code) {
+              return '<div class="katex-display"><span class="katex-display">' + code + '</span></div>';
+            });
+          });
+        }
+      ]
+    }
+  </script>
+  <!-- Docsify 核心 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  
+  <!-- 搜索插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片缩放插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 代码复制插件 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- 字数统计插件 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 分页导航插件 -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  
+  <!-- KaTeX 插件 -->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+  
+  <!-- 代码高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  
+  <!-- Mermaid 图表插件 -->
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  
+  <!-- PlantUML 支持 -->
+  <script src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+</body>
+</html> 
