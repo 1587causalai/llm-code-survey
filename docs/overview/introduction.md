@@ -19,4 +19,4 @@
 
 ## 当前进展
 
-[查看研究日志](../progress/research-log.md) 
+[查看研究日志](../research-log.md) 

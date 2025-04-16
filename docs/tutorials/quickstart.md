@@ -39,4 +39,4 @@ docsify serve docs
 ## 下一步
 
 - 阅读[项目背景](../overview/introduction.md)了解更多
-- 查看[研究进展](../progress/research-log.md)了解最新动态 
+- 查看[研究进展](../research-log.md)了解最新动态 
